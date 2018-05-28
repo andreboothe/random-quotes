@@ -8,9 +8,9 @@ const QuoteBlock = ({quote, author, onClickNewQuote, onClickTweetIt}) => {
         <div className="block">
             <blockquote>
                 <p>
-                    <i class="fas fa-quote-left"></i>
+                    <i className="fas fa-quote-left"></i>
                     {quote} 
-                    <i class="fas fa-quote-right"></i>
+                    <i className="fas fa-quote-right"></i>
                 </p>
                 <footer >-- {author}</footer>
             </blockquote>
@@ -19,7 +19,7 @@ const QuoteBlock = ({quote, author, onClickNewQuote, onClickTweetIt}) => {
                 <a href={`https://twitter.com/intent/tweet?text=${tweet} target='_blank'`}>
                     <button>
                         Tweet It!
-                        <i class="fab fa-twitter"></i>
+                        <i className="fab fa-twitter"></i>
                     </button>
                 </a>
                      
