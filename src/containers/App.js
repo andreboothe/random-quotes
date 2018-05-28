@@ -15,7 +15,7 @@ class App extends Component {
 
   getQuote = () => {
     const url  = 'https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en';
-    try{
+    
       fetch(url, {
         headers: {
           'Access-Control-Allow-Origin':'*'
@@ -24,8 +24,8 @@ class App extends Component {
       })
       .then(response => response.json())
       .then(randomQuote => this.setState({quote: randomQuote.quoteText, 
-        author: randomQuote.quoteAuthor}));
-    }catch(e){this.getQuote();} 
+        author: randomQuote.quoteAuthor}))
+      .catch(() => this.getQuote());
   }
 
   componentDidMount() {
