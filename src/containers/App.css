@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+section{
+  position: relative;
+  bottom: 15%;
+}
+
+.title{
+  font-size: 350%;
+}
+
+h1{
+  font-family: 'Lobster', Monospace;
+}
+
