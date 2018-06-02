@@ -14,18 +14,13 @@ class App extends Component {
   }
 
   getQuote = () => {
-    const url  = 'https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en';
-    
-      fetch(url, {
-        headers: {
-          'Access-Control-Allow-Origin':'*'
-          },
-        mode: 'cors'
-      })
+    const url  = 'https://talaikis.com/api/quotes/random/';
+
+      fetch(url)
       .then(response => response.json())
-      .then(randomQuote => this.setState({quote: randomQuote.quoteText, 
-        author: randomQuote.quoteAuthor}))
-      .catch(() => this.getQuote());
+      .then(randomQuote => this.setState({quote: randomQuote.quote, 
+        author: randomQuote.author}))
+      .catch(err => console.log(err));
   }
 
   componentDidMount() {

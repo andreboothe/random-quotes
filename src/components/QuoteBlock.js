@@ -16,7 +16,7 @@ const QuoteBlock = ({quote, author, onClickNewQuote, onClickTweetIt}) => {
             </blockquote>
             <div className="btnBlock">
                 <button onClick={onClickNewQuote}>New Quote</button>
-                <a href={`https://twitter.com/intent/tweet?text=${tweet} target='_blank'`}>
+                <a href={`https://twitter.com/intent/tweet?text=${tweet} `} target='_blank'>
                     <button>
                         Tweet It!
                         <i className="fab fa-twitter"></i>
